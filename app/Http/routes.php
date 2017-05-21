@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::get('/map', function () {
     return view('master');
 });
+
+Route::get('/data', function (){
+	$data = Data::all ();
+	return view ('/data')->withData($data);
+});
